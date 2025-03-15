@@ -1,6 +1,7 @@
 import random
 
 def guess_number_game():
+    """Number Guessing Game"""
     print("\nHere is a Number Guessing Game to Kill Your Boredom!")
     lower = 1
     upper = 20
@@ -11,6 +12,7 @@ def guess_number_game():
     attempts = 0
 
     while True:
+        """Output"""
         try:
             guess = int(input("Enter your Guess: "))
             attempts += 1
@@ -27,6 +29,7 @@ def guess_number_game():
             print("Invalid Input! Please enter a valid number")
 
 def rock_paper_scissors_game():
+    """Rock Paper Scissors Game"""
     print("\nHere is a Rock, Paper, Scissors Game!")
     options = ["rock", "paper", "scissors"]
 
@@ -43,6 +46,7 @@ def rock_paper_scissors_game():
         computer = random.choice(options)
         print(f"Compuer Chose: {computer}")
 
+        """Output"""
         if user_choice == computer:
             print ("It's a tie!")
         elif (user_choice == "rock" and computer == "scissors"):
@@ -55,6 +59,7 @@ def rock_paper_scissors_game():
             print("Upps, You lose!")
         
 def display_menu():
+    """Menu"""
     print("\nSelect a Game to Play:")
     print("1. Number Guessing Game")
     print("2. Rock Paper Scissors Game")
