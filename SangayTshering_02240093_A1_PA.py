@@ -1,4 +1,5 @@
 def is_prime(n):
+    """Prime Number Checker"""
     if n <= 1:
         return False
     for i in range(2, n):
@@ -7,6 +8,7 @@ def is_prime(n):
     return True
 
 def prime_sum(start, end):
+    """Prime Number sum Calculator"""
     total = 0
     for num in range(start, end + 1):
         if is_prime(num):
@@ -14,6 +16,7 @@ def prime_sum(start, end):
     return total
 
 def length_converter(value, unit):
+    """Length Unit Converter"""
     if unit == 'M':
         return round(value * 3.28084, 2)
     elif unit == 'F':
@@ -22,6 +25,7 @@ def length_converter(value, unit):
         return None
     
 def consonant_counter(text):
+    """Consonant Counter"""
     consonants = "BbCcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZz"
     count = 0
     for letter in text:
@@ -30,6 +34,7 @@ def consonant_counter(text):
     return count
 
 def min_max_finder(numbers):
+    """Min-Max Number Finder"""
     if len(numbers) == 0:
         return None, None
     smallest = largest = numbers[0]
@@ -41,12 +46,14 @@ def min_max_finder(numbers):
     return smallest, largest
 
 def is_palindrome(text):
+    """Palindrome Checker"""
     cleanedtext = text.replace(" ", "").lower()
     return cleanedtext == cleanedtext[::-1]
 
 import requests
 
 def word_counter(filepath):
+    """Word Counter from Text file"""
     response = requests.get(filepath)
     text = response.text.lower()
     wlist = ["the", "was", "and"]
@@ -54,6 +61,7 @@ def word_counter(filepath):
     return word 
 
 def menu_display():
+    """Menu"""
     print("\nSelect an option from 1 to 6")
     print("1. Prime Number sum calculator")
     print("2. Length unit Converter")
